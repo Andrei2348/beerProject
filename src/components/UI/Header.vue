@@ -28,6 +28,9 @@
       </li>
     </ul>
     <div class="navbar__person-wrapper">
+      <div class="navbar__person-search">
+        <input type="text" placeholder="Введите название продукта">
+      </div>
       <div class="navbar__person-cart">
         <router-link to="/cart" class="navbar__menu-item--link">
           <img
@@ -35,12 +38,19 @@
             src="@/assets/images/Icons/Cart.svg"
             alt=""
           />
+          <span>{{ resultCount }}</span>
         </router-link>
       </div>
     </div>
   </nav>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { computed } from 'vue'
+import store from '@/store'
+
+const resultCount: Number = computed(() => store.state.resultCount)
+console.log(store)
+</script>
 
 <style scoped>
 .navbar__menu-items {

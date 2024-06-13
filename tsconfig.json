@@ -20,6 +20,15 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/store/actions.js",
+    "src/store/index.js",
+    "src/store/getters.js",
+    "src/store/mutations.js",
+    "src/store/state.js"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
