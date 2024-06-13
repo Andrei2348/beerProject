@@ -2,27 +2,27 @@
   <nav class="navbar">
     <ul class="navbar__menu-items">
       <li class="navbar__menu-item">
-        <router-link to="/catalog" class="navbar__menu-item--link"
+        <router-link :to="{name: 'catalog'}" class="navbar__menu-item--link"
           >Каталог</router-link
         >
       </li>
       <li class="navbar__menu-item">
-        <router-link to="/distribute" class="navbar__menu-item--link"
+        <router-link :to="{name: 'distribute'}" class="navbar__menu-item--link"
           >Дистрибуция</router-link
         >
       </li>
       <li class="navbar__menu-item">
-        <router-link to="/complectation" class="navbar__menu-item--link"
+        <router-link :to="{name: 'complectation'}" class="navbar__menu-item--link"
           >Комплектация магазинов</router-link
         >
       </li>
       <li class="navbar__menu-item">
-        <router-link to="/about" class="navbar__menu-item--link"
+        <router-link :to="{name: 'about'}" class="navbar__menu-item--link"
           >О компании</router-link
         >
       </li>
       <li class="navbar__menu-item">
-        <router-link to="/contacts" class="navbar__menu-item--link"
+        <router-link :to="{name: 'contacts'}" class="navbar__menu-item--link"
           >Контакты</router-link
         >
       </li>
@@ -32,7 +32,7 @@
         <input type="text" placeholder="Введите название продукта">
       </div>
       <div class="navbar__person-cart">
-        <router-link to="/cart" class="navbar__menu-item--link">
+        <router-link :to="{name: 'cart'}" class="navbar__menu-item--link">
           <img
             class="navbar__person-image"
             src="@/assets/images/Icons/Cart.svg"

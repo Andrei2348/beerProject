@@ -11,5 +11,4 @@ const store = createStore({
   getters,
 })
 
-
 export default store

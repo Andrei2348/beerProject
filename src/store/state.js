@@ -1,3 +1,3 @@
 export default {
-    resultCout: 1
+  resultCout: 0,
 }
