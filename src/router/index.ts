@@ -7,8 +7,9 @@ import Catalog from '@/components/views/Catalog.vue'
 import Contacts from '@/components/views/Contacts.vue'
 import Distribute from '@/components/views/Distribute.vue'
 import Complectation from '@/components/views/Complectation.vue'
-import BearList from '@/components/views/BearList.vue'
+import BeerList from '@/components/views/BeerList.vue'
 import Search from '@/components/views/Search.vue'
+import BeerDetails from '@/components/views/BeerDetails.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,51 +19,55 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/',
         name: 'home',
-        component: HomeView
+        component: HomeView,
       },
       {
         path: '/search/:data',
         name: 'search',
-        component: Search
+        component: Search,
       },
       {
         path: '/catalog',
         name: 'catalog',
-        component: Catalog
+        component: Catalog,
       },
-    ]
+      { path: '/beer/:id', 
+        name: 'beerDetails', 
+        component: BeerDetails,
+      },
+    ],
   },
-  
+
   {
     path: '/about',
     name: 'about',
-    component: About
+    component: About,
   },
   {
     path: '/cart',
     name: 'cart',
-    component: Cart
+    component: Cart,
   },
   {
     path: '/contacts',
     name: 'contacts',
-    component: Contacts
+    component: Contacts,
   },
   {
     path: '/distribute',
     name: 'distribute',
-    component: Distribute
+    component: Distribute,
   },
   {
     path: '/complectation',
     name: 'complectation',
-    component: Complectation
+    component: Complectation,
   },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 })
 
 export default router
