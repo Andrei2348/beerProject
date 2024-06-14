@@ -1,3 +1,3 @@
 export default {
-  resultCout: 0,
+  resultCout: [],
 }

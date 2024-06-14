@@ -28,9 +28,7 @@
       </li>
     </ul>
     <div class="navbar__person-wrapper">
-      <div class="navbar__person-search">
-        <input type="text" placeholder="Введите название продукта">
-      </div>
+      
       <div class="navbar__person-cart">
         <router-link :to="{name: 'cart'}" class="navbar__menu-item--link">
           <img

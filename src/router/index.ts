@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import DefaultLayout from '@/components/UI/DefaultLayout.vue'
 import HomeView from '@/components/views/HomeView.vue'
 import About from '@/components/views/About.vue'
 import Cart from '@/components/views/Cart.vue'
@@ -7,18 +8,31 @@ import Contacts from '@/components/views/Contacts.vue'
 import Distribute from '@/components/views/Distribute.vue'
 import Complectation from '@/components/views/Complectation.vue'
 import BearList from '@/components/views/BearList.vue'
+import Search from '@/components/views/Search.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    component: DefaultLayout,
+    children: [
+      {
+        path: '/',
+        name: 'home',
+        component: HomeView
+      },
+      {
+        path: '/search/:data',
+        name: 'search',
+        component: Search
+      },
+      {
+        path: '/catalog',
+        name: 'catalog',
+        component: Catalog
+      },
+    ]
   },
-  {
-    path: '/search/:data',
-    name: 'search',
-    component: BearList
-  },
+  
   {
     path: '/about',
     name: 'about',
@@ -28,11 +42,6 @@ const routes: Array<RouteRecordRaw> = [
     path: '/cart',
     name: 'cart',
     component: Cart
-  },
-  {
-    path: '/catalog',
-    name: 'catalog',
-    component: Catalog
   },
   {
     path: '/contacts',
