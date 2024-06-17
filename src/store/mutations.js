@@ -1,3 +1,3 @@
-export function setSearchedBeer(state, beer){
-    state.searchedBeer = beer
+export function setSearchedBeer(state, beer) {
+  state.searchedBeer = beer || []
 }

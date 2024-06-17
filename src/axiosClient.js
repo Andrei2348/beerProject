@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiosClient = axios.create({
-    baseURL: 'https://0c084bf8e2515d75.mokky.dev/beerList',
+    baseURL: import.meta.env.VITE_API_BASE_URL,
 })
 
 export default axiosClient
