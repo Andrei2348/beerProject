@@ -1,4 +1,5 @@
 export default {
-  resultCout: [],
-  searchedBeer: []
+  resultCout: 1,
+  searchedBeer: [],
+  isLogin: false
 }
