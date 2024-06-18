@@ -3,6 +3,7 @@
     :slides-per-view="1"
     :loop=true
     :modules="modules"
+    :grabCursor=true
     navigation
     :pagination=true
     :autoplay="{
@@ -33,7 +34,14 @@ const modules: Array = [Autoplay, Navigation, Pagination];
 <style scoped>
 .swiper{
     height: 100vh;
+    width: 100%;
+    overflow: visible;
     position: relative;
+}
+.swiper-pagination .swiper-pagination-bullets .swiper-pagination-horizontal{
+    position: absolute;
+    bottom: 100px !important;
+    padding-bottom: 200px;
 }
 .slide__card{
     position: relative;
