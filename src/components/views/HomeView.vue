@@ -2,13 +2,12 @@
 
 <template>
   <div class="main__page-wrapper">
-    <img class="main__page-slide" src="@/assets/images/slides/slide_01.jpg" alt="Слайд главной страницы" />
+    <Slider />
     <div class="main__page-content">
       <h1 class="main__page-title">В стремлении <span>к совершенству.</span></h1>
       <p class="main__page-text">
-        В ассортименте в большом разнообразии представлены хмельные напитки собственного изготовления, а также от
-        проверенных и надёжных партнёров – приобрести пиво оптом Москве и Московской области можно на выгодных условиях,
-        а главное, будучи уверенным в отличных вкусовых характеристиках!
+        В ассортименте в большом разнообразии представлены хмельные напитки собственного изготовления, а также от проверенных и надёжных партнёров – приобрести пиво оптом Москве и Московской области
+        можно на выгодных условиях, а главное, будучи уверенным в отличных вкусовых характеристиках!
       </p>
       <div class="main__page-button">Перейти в каталог</div>
     </div>
@@ -20,6 +19,7 @@
 import { computed, onMounted, ref } from 'vue';
 import store from '@/store';
 import axiosClient from '@/axiosClient.js';
+import Slider from '@/components/UI/Slider.vue';
 
 const productsList = ref([]);
 onMounted(async () => {
@@ -34,26 +34,6 @@ onMounted(async () => {
     z-index: 1;
     height: 100vh;
   }
-  &__page-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: block;
-    z-index: 1;
-  }
-  &__page-wrapper::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #00000099;
-    z-index: 2;
-  }
   &__page-content {
     position: absolute;
     top: 50%;
@@ -62,15 +42,15 @@ onMounted(async () => {
     text-align: center;
     z-index: 30;
   }
-  &__page-title{
+  &__page-title {
     font-size: 80px;
     line-height: 75px;
     font-weight: 600;
     color: #fff;
     margin-bottom: 28px;
   }
-  &__page-title span{
-    color: #FDCF55;
+  &__page-title span {
+    color: #fdcf55;
   }
   &__page-text {
     width: 920px;
@@ -81,7 +61,7 @@ onMounted(async () => {
     color: #fff;
     margin-bottom: 40px;
   }
-  &__page-button{
+  &__page-button {
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
@@ -89,9 +69,8 @@ onMounted(async () => {
     display: inline-block;
     padding: 15px 58px;
     border-radius: 50px;
-    background-color: #FDCF55;
+    background-color: #fdcf55;
     cursor: pointer;
   }
-
 }
 </style>
