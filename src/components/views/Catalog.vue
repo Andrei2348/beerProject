@@ -2,38 +2,21 @@
 
 <template>
   <h1>Каталог</h1>
-
-  <div class="navbar__person-search">
-    <input
-      v-model="keyword"
-      type="text"
-      placeholder="Введите название продукта"
-      @input="searchBeer"
-    />
-  </div>
-  <div v-for="beerCard of beer" :key="beer.id">
-    <router-link :to="{ name: 'beerDetails', params: { id: beerCard.id } }">{{
-      beerCard
-    }}</router-link>
-  </div>
+  <p>{{ productsList }}</p>
 </template>
 
 <script setup type="ts">
-import { ref, computed, onMounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router';
+import { computed, onMounted, ref } from 'vue';
+import store from '@/store';
+import axiosClient from '@/axiosClient.js';
 
-import store from '@/store'
 
-const router = useRouter()
-const keyword = ref('')
-const beer = computed(() => store.state.searchedBeer)
+const productsList = ref([]);
+onMounted(async () => {
+  const response = await axiosClient.get('/');
+  productsList.value = response.data;
+});
 
-function searchBeer(event){
-  store.dispatch('searchBeer', event.target.value)
-}
 
-onMounted(() => {
-  console.log(router.params)
-  // keyword.value = router.params.name
-})
+
 </script>

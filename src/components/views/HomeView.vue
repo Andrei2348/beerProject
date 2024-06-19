@@ -10,23 +10,24 @@
         можно на выгодных условиях, а главное, будучи уверенным в отличных вкусовых характеристиках!
       </p>
       <div class="main__page-button">Перейти в каталог</div>
+      <div class="main__page-button--scroll">
+        <p class="main__page-button--text">
+          Пролистать вниз
+        </p>
+        <img class="main__page-mouse--image" src="@/assets/images/Icons/Mouse.png" alt="Кнопка скролл">
+        <img class="main__page-arrow--image" src="@/assets/images/Icons/Arrow.png" alt="Стрелка скролл">
+      </div>
     </div>
   </div>
   <h1>Домашняя страница</h1>
-  <p>{{ productsList }}</p>
+  <Catalog />
 </template>
-<script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
-import store from '@/store';
-import axiosClient from '@/axiosClient.js';
-import Slider from '@/components/UI/Slider.vue';
 
-const productsList = ref([]);
-onMounted(async () => {
-  const response = await axiosClient.get('/');
-  productsList.value = response.data;
-});
+<script setup lang="ts">
+import Slider from '@/components/UI/Slider.vue';
+import Catalog from './Catalog.vue';
 </script>
+
 <style scoped lang="scss">
 .main {
   &__page-wrapper {

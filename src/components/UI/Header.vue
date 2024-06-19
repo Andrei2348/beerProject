@@ -17,9 +17,7 @@
             <router-link :to="{ name: 'distribute' }" class="navbar__menu-item--link">Дистрибуция</router-link>
           </li>
           <li class="navbar__menu-item">
-            <router-link :to="{ name: 'complectation' }" class="navbar__menu-item--link"
-              >Комплектация магазинов</router-link
-            >
+            <router-link :to="{ name: 'complectation' }" class="navbar__menu-item--link">Комплектация магазинов</router-link>
           </li>
           <li class="navbar__menu-item">
             <router-link :to="{ name: 'about' }" class="navbar__menu-item--link">О компании</router-link>
@@ -38,16 +36,12 @@
             <img class="navbar__person-image" src="@/assets/images/Icons/user.svg" alt="Страница поиска" />
           </div>
 
-          <router-link :to="{ name: 'catalog' }" class="navbar__menu-item--link">
+          <router-link :to="{ name: 'search' }" class="navbar__menu-item--link">
             <img class="navbar__person-image" src="@/assets/images/Icons/Search.svg" alt="Страница поиска" />
           </router-link>
 
           <router-link :to="{ name: 'cart' }" class="navbar__menu-item--link">
-            <img
-              class="navbar__person-image navbar__person-cart"
-              src="@/assets/images/Icons/Cart.svg"
-              alt="Корзина товаров"
-            />
+            <img class="navbar__person-image navbar__person-cart" src="@/assets/images/Icons/Cart.svg" alt="Корзина товаров" />
             <span v-if="isLogin && resultCount">{{ resultCount }}</span>
           </router-link>
         </div>

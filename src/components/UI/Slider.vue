@@ -3,9 +3,7 @@
     :slides-per-view="1"
     :loop=true
     :modules="modules"
-    :grabCursor=true
-    navigation
-    :pagination=true
+    :navigation=false
     :autoplay="{
         delay: 3500,
         disableOnInteraction: false,
@@ -20,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -28,7 +26,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const slides: Array = ['slide_01.jpg', 'slide_02.jpg', 'slide_03.jpg'];
-const modules: Array = [Autoplay, Navigation, Pagination];
+const modules: Array = [Autoplay, Navigation];
 </script>
 
 <style scoped>
@@ -37,11 +35,6 @@ const modules: Array = [Autoplay, Navigation, Pagination];
     width: 100%;
     overflow: visible;
     position: relative;
-}
-.swiper-pagination .swiper-pagination-bullets .swiper-pagination-horizontal{
-    position: absolute;
-    bottom: 100px !important;
-    padding-bottom: 200px;
 }
 .slide__card{
     position: relative;
