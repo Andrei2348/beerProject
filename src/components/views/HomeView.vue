@@ -10,22 +10,30 @@
         можно на выгодных условиях, а главное, будучи уверенным в отличных вкусовых характеристиках!
       </p>
       <div class="main__page-button">Перейти в каталог</div>
-      <div class="main__page-button--scroll">
-        <p class="main__page-button--text">
-          Пролистать вниз
-        </p>
-        <img class="main__page-mouse--image" src="@/assets/images/Icons/Mouse.png" alt="Кнопка скролл">
-        <img class="main__page-arrow--image" src="@/assets/images/Icons/Arrow.png" alt="Стрелка скролл">
+    </div>
+    <div class="main__page-button--scroll">
+      <p class="main__page-button--text">Пролистать вниз</p>
+      <div class="main__page-button--wrapper" @click="scrollToElement">
+        <img class="main__page-mouse--image" src="@/assets/images/Icons/Mouse.png" alt="Кнопка скролл" />
+        <img class="main__page-arrow--image" src="@/assets/images/Icons/Arrow.png" alt="Стрелка скролла" />
       </div>
     </div>
   </div>
-  <h1>Домашняя страница</h1>
+  <Assortment />
+  <h1 ref="dataElement">Домашняя страница</h1>
   <Catalog />
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import Slider from '@/components/UI/Slider.vue';
 import Catalog from './Catalog.vue';
+import Assortment from '@/components/UI/Assortment.vue';
+
+const dataElement = ref(null);
+const scrollToElement = () => {
+  dataElement.value.scrollIntoView({ behavior: 'smooth' });
+};
 </script>
 
 <style scoped lang="scss">
@@ -72,6 +80,37 @@ import Catalog from './Catalog.vue';
     border-radius: 50px;
     background-color: #fdcf55;
     cursor: pointer;
+  }
+  &__page-button--wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  &__page-button--text {
+    margin-bottom: 9px;
+  }
+  &__page-mouse--image {
+    height: 38px;
+    width: 21px;
+    display: inline-block;
+    margin-bottom: 13px;
+  }
+  &__page-arrow--image {
+    height: 28px;
+    width: 7px;
+    display: inline-block;
+  }
+  &__page-button--scroll {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    bottom: 44px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
   }
 }
 </style>

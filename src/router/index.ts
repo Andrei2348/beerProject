@@ -22,7 +22,7 @@ const routes: Array<RouteRecordRaw> = [
         component: HomeView,
       },
       {
-        path: '/search',
+      path: '/search',
         name: 'search',
         component: Search,
       },
