@@ -3,7 +3,6 @@
     <div class="container">
       <div class="assortment__content-wrapper">
         <h2 class="assortment__title">Наш ассортимент</h2>
-
       </div>
       <ul class="assortment__items">
         <li class="assortment__item">

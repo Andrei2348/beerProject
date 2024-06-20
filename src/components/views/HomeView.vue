@@ -19,9 +19,12 @@
       </div>
     </div>
   </div>
-  <Assortment />
+  <div class="assortment__container" ref="dataElement">
+    <Assortment />
+  </div>
   <Reasons />
-  <h1 ref="dataElement">Домашняя страница</h1>
+  <About />
+  <h1>Домашняя страница</h1>
   <Catalog />
 </template>
 
@@ -30,7 +33,8 @@ import { ref } from 'vue';
 import Slider from '@/components/UI/Slider.vue';
 import Catalog from './Catalog.vue';
 import Assortment from '@/components/UI/Assortment.vue';
-import Reasons from '@/components/UI/Reasons.vue'
+import Reasons from '@/components/UI/Reasons.vue';
+import About from '@/components/UI/About.vue';
 
 const dataElement = ref(null);
 const scrollToElement = () => {
@@ -92,6 +96,10 @@ const scrollToElement = () => {
   }
   &__page-button--text {
     margin-bottom: 9px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
   }
   &__page-mouse--image {
     height: 38px;
