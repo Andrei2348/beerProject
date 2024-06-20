@@ -1,7 +1,10 @@
 <template>
   <div class="assortment__wrapper">
     <div class="container">
-      <h2 class="assortment__title">Наш ассортимент</h2>
+      <div class="assortment__content-wrapper">
+        <h2 class="assortment__title">Наш ассортимент</h2>
+
+      </div>
       <ul class="assortment__items">
         <li class="assortment__item">
           <BeerTraced />
@@ -36,6 +39,7 @@ import Lemonade from './Lemonade.vue';
 </script>
 <style scoped lang="scss">
 .assortment {
+  
   &__wrapper {
     background-image: url('@/assets/images/backgrounds/assortment/background.jpg');
     background-size: cover;
@@ -43,13 +47,11 @@ import Lemonade from './Lemonade.vue';
     background-repeat: no-repeat;
     position: relative;
   }
-  // &__wrapper::before{
-  //     content: '';
-  //     position: absolute;
-  //     left: 0;
-  //     top: 50%;
-  //     background-image: url('@/assets/images/backgrounds/assortment/background.jpg');
-  // }
+  &__content-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 31px;
+  }
   &__title {
     text-align: center;
     font-size: 35px;
@@ -58,7 +60,26 @@ import Lemonade from './Lemonade.vue';
     color: #fff;
     position: relative;
     padding-top: 63px;
-    margin-bottom: 31px;
+  }
+  &__title::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 47px;
+    background-image: url('@/assets/images/Icons/wheat.png');
+    top: 40px;
+    left: 50%;
+    transform: translateX(-130%);
+  }
+  &__title::after {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 47px;
+    background-image: url('@/assets/images/Icons/wheat.png');
+    top: 40px;
+    left: 50%;
+    transform: translateX(30%) rotate(180deg);
   }
   &__items {
     display: flex;

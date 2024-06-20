@@ -20,6 +20,7 @@
     </div>
   </div>
   <Assortment />
+  <Reasons />
   <h1 ref="dataElement">Домашняя страница</h1>
   <Catalog />
 </template>
@@ -29,6 +30,7 @@ import { ref } from 'vue';
 import Slider from '@/components/UI/Slider.vue';
 import Catalog from './Catalog.vue';
 import Assortment from '@/components/UI/Assortment.vue';
+import Reasons from '@/components/UI/Reasons.vue'
 
 const dataElement = ref(null);
 const scrollToElement = () => {
