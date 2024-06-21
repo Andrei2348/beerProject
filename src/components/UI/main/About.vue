@@ -89,7 +89,7 @@
     height: 18px;
     width: 47px;
     background-image: url('@/assets/images/Icons/wheatGreen.png');
-    bottom: 40px;
+    bottom: 46px;
     left: 0;
   }
   &-title::after {
@@ -98,7 +98,7 @@
     height: 18px;
     width: 47px;
     background-image: url('@/assets/images/Icons/wheatGreen.png');
-    bottom: 40px;
+    bottom: 46px;
     left: 50px;
     transform: translateX(30%) rotate(180deg);
   }

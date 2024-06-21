@@ -25,6 +25,50 @@
 
 <style scoped lang="scss">
 .news {
+    &__wrapper{
+        position: relative;
+    }
+    &__wrapper::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 224px;
+        background-image: url('@/assets/images/backgrounds/news/background.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+    &__title{
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 42px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 16px;
+    padding-top: 125px;
+  }
+  &__title::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 47px;
+    background-image: url('@/assets/images/Icons/wheat.png');
+    bottom: 46px;
+    left: 50%;
+    transform: translateX(-130%);
+  }
+  &__title::after {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 47px;
+    background-image: url('@/assets/images/Icons/wheat.png');
+    bottom: 46px;
+    left: 50%;
+    transform: translateX(30%) rotate(180deg);
+  }
   &__wrapper {
     padding-bottom: 100px;
   }

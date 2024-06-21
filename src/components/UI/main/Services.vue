@@ -46,7 +46,7 @@
     height: 18px;
     width: 47px;
     background-image: url('@/assets/images/Icons/wheat.png');
-    top: 0;
+    bottom: 46px;
     left: 50%;
     transform: translateX(-130%);
   }
@@ -56,7 +56,7 @@
     height: 18px;
     width: 47px;
     background-image: url('@/assets/images/Icons/wheat.png');
-    top: 0;
+    bottom: 46px;
     left: 50%;
     transform: translateX(30%) rotate(180deg);
   }
