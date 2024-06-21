@@ -26,6 +26,7 @@
   <About />
   <Services />
   <News />
+  <Footer />
 </template>
 
 <script setup lang="ts">
@@ -35,7 +36,8 @@ import Assortment from '@/components/UI/main/Assortment.vue';
 import Reasons from '@/components/UI/main/Reasons.vue';
 import About from '@/components/UI/main/About.vue';
 import Services from '@/components/UI/main/Services.vue';
-import News from '@/components/UI/main/News.vue'
+import News from '@/components/UI/main/News.vue';
+import Footer from '@/components/UI/Footer.vue'
 
 const dataElement = ref(null);
 const scrollToElement = () => {
