@@ -30,6 +30,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  z-index: 0;
+}
+.about__header::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000066;
 }
 .about__header-title {
   width: 511px;
@@ -40,6 +50,8 @@
   text-align: center;
   margin: 0 auto;
   color: #ffffff;
+  position: relative;
+  z-index: 10;
 }
 .about__content {
   &-wrapper {

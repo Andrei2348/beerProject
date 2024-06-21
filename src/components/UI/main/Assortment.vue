@@ -30,15 +30,14 @@
   </div>
 </template>
 <script setup lang="ts">
-import BeerTraced from './BeerTraced.vue';
-import BeerTracedNew from './BeerTracedNew.vue';
-import Cider from './Cider.vue';
-import LemonadeTraced from './LemonadeTraced.vue';
-import Lemonade from './Lemonade.vue';
+import BeerTraced from './../sketches/BeerTraced.vue';
+import BeerTracedNew from './../sketches/BeerTracedNew.vue';
+import Cider from './../sketches/Cider.vue';
+import LemonadeTraced from './../sketches/LemonadeTraced.vue';
+import Lemonade from './../sketches/Lemonade.vue';
 </script>
 <style scoped lang="scss">
 .assortment {
-  
   &__wrapper {
     background-image: url('@/assets/images/backgrounds/assortment/background.jpg');
     background-size: cover;

@@ -24,17 +24,18 @@
   </div>
   <Reasons />
   <About />
-  <h1>Домашняя страница</h1>
-  <Catalog />
+  <Services />
+  <News />
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import Slider from '@/components/UI/Slider.vue';
-import Catalog from './Catalog.vue';
-import Assortment from '@/components/UI/Assortment.vue';
-import Reasons from '@/components/UI/Reasons.vue';
-import About from '@/components/UI/About.vue';
+import Slider from '@/components/UI/main/Slider.vue';
+import Assortment from '@/components/UI/main/Assortment.vue';
+import Reasons from '@/components/UI/main/Reasons.vue';
+import About from '@/components/UI/main/About.vue';
+import Services from '@/components/UI/main/Services.vue';
+import News from '@/components/UI/main/News.vue'
 
 const dataElement = ref(null);
 const scrollToElement = () => {
