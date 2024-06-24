@@ -127,113 +127,113 @@
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
-}
-.footer__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  padding-top: 63px;
-  padding-bottom: 60px;
-}
-.footer__logo-wrapper {
-  transform: translateY(-33px);
-  width: 360px;
-}
-.footer__logo-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  margin-bottom: 26px;
-}
-.footer__logo-link--img {
-  height: 97px;
-  width: 82px;
-}
-.footer__logo-link--text {
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 47px;
-  color: #fdcf55;
-  text-transform: uppercase;
-}
-.footer__logo-text {
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 18px;
-  color: #fff;
-  padding-right: 10px;
-  margin-bottom: 42px;
-}
-.footer__logo-social {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.footer__logo-item img {
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-}
-.footer__copyright {
-  border-top: 1px solid #3f3f3f;
-}
-.footer__copyright-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
-.footer__copyright-text {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 17px;
-  color: #fff;
-}
-.footer__menu-items {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-right: 10px;
-}
-.footer__menu-item--link {
-  color: #fdcf55;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 21px;
-}
-.footer__contacts{
-  width: 240px;
-}
-.footer__contacts-text + .footer__contacts-text{
-  margin-top: 20px;
-}
-.footer__contacts-text{
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 14px;
-  padding-right: 10px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19px;
-  color: #fff;
-}
-.footer__contacts-text span{
-  width: 20px;
-  height: 21px;
-}
-.footer__contacts-text a{
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19px;
-  color: #fff;
-}
-.footer__contacts-title{
-  color: #FDCF55;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 21px;
-  margin-bottom: 25px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 63px;
+    padding-bottom: 60px;
+  }
+  &__logo-wrapper {
+    transform: translateY(-33px);
+    width: 360px;
+  }
+  &__logo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 26px;
+  }
+  &__logo-link--img {
+    height: 97px;
+    width: 82px;
+  }
+  &__logo-link--text {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 47px;
+    color: #fdcf55;
+    text-transform: uppercase;
+  }
+  &__logo-text {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #fff;
+    padding-right: 10px;
+    margin-bottom: 42px;
+  }
+  &__logo-social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__logo-item img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+  &__copyright {
+    border-top: 1px solid #3f3f3f;
+  }
+  &__copyright-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  &__copyright-text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    color: #fff;
+  }
+  &__menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 10px;
+  }
+  &__menu-item--link {
+    color: #fdcf55;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+  }
+  &__contacts {
+    width: 240px;
+  }
+  &__contacts-text + .footer__contacts-text {
+    margin-top: 20px;
+  }
+  &__contacts-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 14px;
+    padding-right: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #fff;
+  }
+  &__contacts-text span {
+    width: 20px;
+    height: 21px;
+  }
+  &__contacts-text a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #fff;
+  }
+  &__contacts-title {
+    color: #fdcf55;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    margin-bottom: 25px;
+  }
 }
 </style>
