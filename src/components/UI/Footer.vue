@@ -3,21 +3,23 @@
     <div class="container">
       <div class="footer__container">
         <div class="footer__logo-wrapper">
-          <div class="footer__logo-link">
-
-
-
-            <img class="footer__logo-link--img" src="@/assets/images/logo/logoFooter.png" alt="Logo">
+          <router-link :to="{ name: 'home' }" class="footer__logo-link"> 
+            <img class="footer__logo-link--img" src="@/assets/images/logo/logoFooter.png" alt="Logo" />
             <h3 class="footer__logo-link--text">Wunderbeer</h3>
-          </div>
+          </router-link>
           <p class="footer__logo-text">В ассортименте в большом разнообразии представлены хмельные напитки собственного изготовления, а также от проверенных и надёжных партнёров.</p>
-          
-            <ul class="footer__logo-social">
-                <li class="fiiter__logo-item"></li>
-                <li class="fiiter__logo-item"></li>
-                <li class="fiiter__logo-item"></li>
-            </ul>
-          
+
+          <ul class="footer__logo-social">
+            <li class="footer__logo-item">
+              <img src="@/assets/images/Icons/social/Instagram.svg" alt="Инстаграм">
+            </li>
+            <li class="footer__logo-item">
+              <img src="@/assets/images/Icons/social/VK.svg" alt="Вконтакте">
+            </li>
+            <li class="footer__logo-item">
+              <img src="@/assets/images/Icons/social/facebook.svg" alt="Фейсбук">
+            </li>
+          </ul>
         </div>
         <div class="footer__contacts">
           <h3 class="footer__contacts-title">Контактная информация</h3>
@@ -106,9 +108,13 @@
           </ul>
         </div>
       </div>
-      <div class="footer__copyright">
-        <p class="footer__copyright-text">ООО “Вундербир” 2010 - 2020</p>
-        <p class="footer__copyright-text">Все права защищены ©</p>
+    </div>
+    <div class="footer__copyright">
+      <div class="container">
+        <div class="footer__copyright-container">
+          <p class="footer__copyright-text">ООО “Вундербир” 2010 - 2020</p>
+          <p class="footer__copyright-text">Все права защищены ©</p>
+        </div>
       </div>
     </div>
   </footer>
@@ -117,9 +123,83 @@
 <style scoped lang="scss">
 .footer {
   background-image: url('@/assets/images/backgrounds/footer/background.jpg');
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
-.footer__logo-link--img{
-    height: 97px;
-    width:82px;
+.footer__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 63px;
+  padding-bottom: 60px;
 }
+.footer__logo-wrapper{
+  transform: translateY(-33px);
+  width: 360px;
+}
+.footer__logo-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 26px;
+}
+.footer__logo-link--img {
+  height: 97px;
+  width: 82px;
+}
+.footer__logo-link--text{
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 47px;
+  color: #FDCF55;
+  text-transform: uppercase;
+}
+.footer__logo-text{
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #fff;
+  padding-right: 10px;
+  margin-bottom: 42px;
+}
+.footer__logo-social{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer__logo-item img{
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.footer__copyright{
+  border-top: 1px solid #3F3F3F;
+
+}
+.footer__copyright-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.footer__copyright-text{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  color: #fff;
+}
+.footer__menu-items{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 10px;
+}
+.footer__menu-item--link{
+  color: #FDCF55;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
 </style>
