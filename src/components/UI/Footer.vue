@@ -3,7 +3,7 @@
     <div class="container">
       <div class="footer__container">
         <div class="footer__logo-wrapper">
-          <router-link :to="{ name: 'home' }" class="footer__logo-link"> 
+          <router-link :to="{ name: 'home' }" class="footer__logo-link">
             <img class="footer__logo-link--img" src="@/assets/images/logo/logoFooter.png" alt="Logo" />
             <h3 class="footer__logo-link--text">Wunderbeer</h3>
           </router-link>
@@ -11,16 +11,17 @@
 
           <ul class="footer__logo-social">
             <li class="footer__logo-item">
-              <img src="@/assets/images/Icons/social/Instagram.svg" alt="Инстаграм">
+              <img src="@/assets/images/Icons/social/Instagram.svg" alt="Инстаграм" />
             </li>
             <li class="footer__logo-item">
-              <img src="@/assets/images/Icons/social/VK.svg" alt="Вконтакте">
+              <img src="@/assets/images/Icons/social/VK.svg" alt="Вконтакте" />
             </li>
             <li class="footer__logo-item">
-              <img src="@/assets/images/Icons/social/facebook.svg" alt="Фейсбук">
+              <img src="@/assets/images/Icons/social/facebook.svg" alt="Фейсбук" />
             </li>
           </ul>
         </div>
+
         <div class="footer__contacts">
           <h3 class="footer__contacts-title">Контактная информация</h3>
           <p class="footer__contacts-text">
@@ -48,7 +49,7 @@
                 />
               </svg>
             </span>
-            +7 (495) 740-40-51
+            <a href="tel:74957404051">+7 (495) 740-40-51</a>
           </p>
 
           <p class="footer__contacts-text">
@@ -62,7 +63,7 @@
                 />
               </svg>
             </span>
-            +7 (925) 924-07-00
+            <a href="tel:79259240700">+7 (925) 924-07-00</a>
           </p>
 
           <p class="footer__contacts-text">
@@ -82,7 +83,7 @@
                 />
               </svg>
             </span>
-            wunderbeer@mail.ru
+            <a href="mailto:wunderbeer@mail.ru">wunderbeer@mail.ru</a>
           </p>
         </div>
         <div class="footer__navigation">
@@ -127,18 +128,18 @@
   background-position: bottom center;
   background-repeat: no-repeat;
 }
-.footer__container{
+.footer__container {
   display: flex;
   justify-content: space-between;
   align-items: start;
   padding-top: 63px;
   padding-bottom: 60px;
 }
-.footer__logo-wrapper{
+.footer__logo-wrapper {
   transform: translateY(-33px);
   width: 360px;
 }
-.footer__logo-link{
+.footer__logo-link {
   display: inline-flex;
   align-items: center;
   gap: 9px;
@@ -148,14 +149,14 @@
   height: 97px;
   width: 82px;
 }
-.footer__logo-link--text{
+.footer__logo-link--text {
   font-size: 40px;
   font-weight: 400;
   line-height: 47px;
-  color: #FDCF55;
+  color: #fdcf55;
   text-transform: uppercase;
 }
-.footer__logo-text{
+.footer__logo-text {
   font-size: 15px;
   font-weight: 300;
   line-height: 18px;
@@ -163,43 +164,76 @@
   padding-right: 10px;
   margin-bottom: 42px;
 }
-.footer__logo-social{
+.footer__logo-social {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.footer__logo-item img{
+.footer__logo-item img {
   height: 30px;
   width: 30px;
   cursor: pointer;
 }
-.footer__copyright{
-  border-top: 1px solid #3F3F3F;
-
+.footer__copyright {
+  border-top: 1px solid #3f3f3f;
 }
-.footer__copyright-container{
+.footer__copyright-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
 }
-.footer__copyright-text{
+.footer__copyright-text {
   font-size: 14px;
   font-weight: 300;
   line-height: 17px;
   color: #fff;
 }
-.footer__menu-items{
+.footer__menu-items {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding-right: 10px;
 }
-.footer__menu-item--link{
-  color: #FDCF55;
+.footer__menu-item--link {
+  color: #fdcf55;
   font-size: 18px;
   font-weight: 500;
   line-height: 21px;
 }
-
+.footer__contacts{
+  width: 240px;
+}
+.footer__contacts-text + .footer__contacts-text{
+  margin-top: 20px;
+}
+.footer__contacts-text{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 14px;
+  padding-right: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #fff;
+}
+.footer__contacts-text span{
+  width: 20px;
+  height: 21px;
+}
+.footer__contacts-text a{
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #fff;
+}
+.footer__contacts-title{
+  color: #FDCF55;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  margin-bottom: 25px;
+}
 </style>
