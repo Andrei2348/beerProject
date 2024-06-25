@@ -22,7 +22,7 @@ const routes: Array<RouteRecordRaw> = [
         component: HomeView,
       },
       {
-      path: '/search',
+        path: '/search',
         name: 'search',
         component: Search,
       },
@@ -31,9 +31,10 @@ const routes: Array<RouteRecordRaw> = [
         name: 'catalog',
         component: Catalog,
       },
+      { path: '/beer/:id', name: 'beerDetails', component: BeerDetails },
     ],
   },
-  { path: '/beer/:id', name: 'beerDetails', component: BeerDetails },
+  
   {
     path: '/about',
     name: 'about',

@@ -11,7 +11,7 @@
     >
     <SwiperSlide v-for="slide in slides">
         <div class="slide__card">
-            <img class="slide__image" :src="`src/assets/images/slides/${slide}`" alt="" />
+            <img class="slide__image" :src="`src/assets/images/slides/${slide}`" alt="Слайд" />
         </div>
     </SwiperSlide>
     </Swiper>
