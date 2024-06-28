@@ -3,8 +3,12 @@
   <div class="catalog__header">
     <h2 class="catalog__header-title">Каталог</h2>
   </div>
-  <div class="catalog__products-wrapper">
-    <Card v-for="item in productsList" :id="item.id" :key="item.id" :title="item.title" :price="item.price" :strength="item.strength" :category="item.category" :imageUrl="item.imageUrl" />
+  <div class="catalog__wrapper">
+    <SearchPanel />
+    <div class="catalog__products-wrapper">
+      <Card v-for="item in productsList" :id="item.id" :key="item.id" :title="item.title" :price="item.price" :strength="item.strength" :category="item.category" :imageUrl="item.imageUrl" />
+    </div>
+
   </div>
   {{ paginationInfo }}
   <pagination :currentPage="paginationInfo.current_page" :totalPages="paginationInfo.total_pages" @selectPage="selectPage" />
@@ -17,6 +21,7 @@ import axiosClient from '@/axiosClient.js';
 import HeroSlider from '@/components/UI/HeroSlider.vue';
 import Card from '@/components/UI/catalog/Card.vue';
 import Pagination from '@/components/UI/catalog/Pagination.vue';
+import SearchPanel from '@/components/UI/SearchPanel.vue';
 
 const productsList = ref([]);
 const paginationInfo = ref({"currentPage": 1})
@@ -39,8 +44,11 @@ onMounted(async () => {
 </script>
 
 <style scoped lang="scss">
-.catalog__products-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+.catalog__wrapper {
+  display: grid;
+  grid-template-columns: (255px, auto-fit, minmax(200px, 1fr));
+}
+.catalog__products-wrapper{
+  background-color: aqua;
 }
 </style>
