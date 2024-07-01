@@ -1,17 +1,15 @@
 <template>
   <HeroSlider :name="'Каталог'" />
-  <div class="catalog__header">
-    <h2 class="catalog__header-title">Каталог</h2>
-  </div>
-  <div class="catalog__wrapper">
-    <SearchPanel />
-    <div class="catalog__products-wrapper">
-      <Card v-for="item in productsList" :id="item.id" :key="item.id" :title="item.title" :price="item.price" :strength="item.strength" :category="item.category" :imageUrl="item.imageUrl" />
+  <div class="container">
+    <div class="catalog__wrapper">
+      <SearchPanel @changeSearchParam="changeSearchParam" />
+      <div class="catalog__products-wrapper" v-if="productsList.length > 0">
+        <Card v-for="item in productsList" :id="item.id" :key="item.id" :title="item.title" :price="item.price" :strength="item.strength" :category="item.category" :imageUrl="item.imageUrl" />
+      </div>
+      <div class="catalog__products-empty" v-else>Список товаров пуст!</div>
     </div>
-
   </div>
-  {{ paginationInfo }}
-  <pagination :currentPage="paginationInfo.current_page" :totalPages="paginationInfo.total_pages" @selectPage="selectPage" />
+  <pagination :currentPage="paginationInfo.current_page" :totalPages="paginationInfo.total_pages" @selectPage="selectPage" v-if="productsList.length > 0" />
 </template>
 
 <script setup type="ts">
@@ -25,15 +23,24 @@ import SearchPanel from '@/components/UI/SearchPanel.vue';
 
 const productsList = ref([]);
 const paginationInfo = ref({"currentPage": 1})
+const searchParam = ref('')
 
 function selectPage(value){
   paginationInfo.value.current_page = value
-  sendRequest(value)
+  sendRequest(value, searchParam.value)
 }
 
+function changeSearchParam(param){
+  searchParam.value = param
+  sendRequest(1, searchParam.value)
+}
 
-const sendRequest = async (data) =>{
-  const response = await axiosClient.get(`?page=${data}&limit=6`);
+const sendRequest = async (page, search = '') =>{
+  let http = `?page=${page}&limit=6`
+  if(search !== ''){
+    http = `?title=*${search}*&page=${page}&limit=6`
+  }
+  const response = await axiosClient.get(http);
   productsList.value = response.data.items;
   paginationInfo.value = response.data.meta
 }
@@ -45,10 +52,20 @@ onMounted(async () => {
 
 <style scoped lang="scss">
 .catalog__wrapper {
+  margin-top: 35px;
   display: grid;
-  grid-template-columns: (255px, auto-fit, minmax(200px, 1fr));
+  grid-template-columns: (255px minmax(100px, 1fr));
+  gap: 50px;
 }
-.catalog__products-wrapper{
-  background-color: aqua;
+.catalog__products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 214px);
+  gap: 60px 70px;
+}
+.catalog__products-empty{
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #000;
 }
 </style>
